@@ -1,0 +1,820 @@
+Clock Cycle 0
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+Clock Cycle 1
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0xA1020000
+Increment PC = 7A4004
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0xA1020000
+Increment PC = 7A4004
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0xA1020000
+Increment PC = 7A4004
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+Clock Cycle 2
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x810AFFFC
+Increment PC = 7A4008
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0xA1020000
+Increment PC = 7A4004
+
+ID/EX (Write to by the IF stage) 
+RegDst = X, ALUSrc = 1, ALUop = 00, MemRead = 0,  MemWrite = 1, Branch = 0 , MemToReg X, RegWrite = 0,
+IncrPC 7A4004 ReadReg1Value = 108 ReadReg2Value = 102 SEoffset = 00000000 WriteReg_20_16 = 2 WriteReg_15_11 = 0 Function = X
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x810AFFFC
+Increment PC = 7A4008
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x810AFFFC
+Increment PC = 7A4008
+
+ID/EX (Write to by the IF stage) 
+RegDst = X, ALUSrc = 1, ALUop = 00, MemRead = 0,  MemWrite = 1, Branch = 0 , MemToReg X, RegWrite = 0,
+IncrPC 7A4004 ReadReg1Value = 108 ReadReg2Value = 102 SEoffset = 00000000 WriteReg_20_16 = 2 WriteReg_15_11 = 0 Function = X
+
+ID/EX Read (Read by the EX stage) 
+RegDst = X, ALUSrc = 1, ALUop = 00, MemRead = 0,  MemWrite = 1, Branch = 0 , MemToReg X, RegWrite = 0,
+IncrPC 7A4004 ReadReg1Value = 108 ReadReg2Value = 102 SEoffset = 00000000 WriteReg_20_16 = 2 WriteReg_15_11 = 0 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+Clock Cycle 3
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00831820
+Increment PC = 7A400C
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x810AFFFC
+Increment PC = 7A4008
+
+ID/EX (Write to by the IF stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4008 ReadReg1Value = 108 ReadReg2Value = 10A SEoffset = FFFFFFFC WriteReg_20_16 = 10 WriteReg_15_11 = 31 Function = X
+
+ID/EX Read (Read by the EX stage) 
+RegDst = X, ALUSrc = 1, ALUop = 00, MemRead = 0,  MemWrite = 1, Branch = 0 , MemToReg X, RegWrite = 0,
+IncrPC 7A4004 ReadReg1Value = 108 ReadReg2Value = 102 SEoffset = 00000000 WriteReg_20_16 = 2 WriteReg_15_11 = 0 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 1, Branch = 0, MemToReg = X, RegWrite = 0
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 102, WriteRegNum = X
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00831820
+Increment PC = 7A400C
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00831820
+Increment PC = 7A400C
+
+ID/EX (Write to by the IF stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4008 ReadReg1Value = 108 ReadReg2Value = 10A SEoffset = FFFFFFFC WriteReg_20_16 = 10 WriteReg_15_11 = 31 Function = X
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4008 ReadReg1Value = 108 ReadReg2Value = 10A SEoffset = FFFFFFFC WriteReg_20_16 = 10 WriteReg_15_11 = 31 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 1, Branch = 0, MemToReg = X, RegWrite = 0
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 102, WriteRegNum = X
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 1, Branch = 0, MemToReg = X, RegWrite = 0
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 102, WriteRegNum = X
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+Clock Cycle 4
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x01263820
+Increment PC = 7A4010
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00831820
+Increment PC = 7A400C
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A400C ReadReg1Value = 104 ReadReg2Value = 103 SEoffset = X WriteReg_20_16 = 3 WriteReg_15_11 = 3 Function = 32
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4008 ReadReg1Value = 108 ReadReg2Value = 10A SEoffset = FFFFFFFC WriteReg_20_16 = 10 WriteReg_15_11 = 31 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 104, SWvalue = 10A, WriteRegNum = 10
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 1, Branch = 0, MemToReg = X, RegWrite = 0
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 102, WriteRegNum = X
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = X, RegWrite = 0
+LWDataValue = X ALUResult = 108 WriteRegNum = X
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x01263820
+Increment PC = 7A4010
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x01263820
+Increment PC = 7A4010
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A400C ReadReg1Value = 104 ReadReg2Value = 103 SEoffset = X WriteReg_20_16 = 3 WriteReg_15_11 = 3 Function = 32
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A400C ReadReg1Value = 104 ReadReg2Value = 103 SEoffset = X WriteReg_20_16 = 3 WriteReg_15_11 = 3 Function = 32
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 104, SWvalue = 10A, WriteRegNum = 10
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 104, SWvalue = 10A, WriteRegNum = 10
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = X, RegWrite = 0
+LWDataValue = X ALUResult = 108 WriteRegNum = X
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = X, RegWrite = 0
+LWDataValue = X ALUResult = 108 WriteRegNum = X
+
+Clock Cycle 5
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x01224820
+Increment PC = 7A4014
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x01263820
+Increment PC = 7A4010
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4010 ReadReg1Value = 109 ReadReg2Value = 106 SEoffset = X WriteReg_20_16 = 6 WriteReg_15_11 = 7 Function = 32
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A400C ReadReg1Value = 104 ReadReg2Value = 103 SEoffset = X WriteReg_20_16 = 3 WriteReg_15_11 = 3 Function = 32
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 207, SWvalue = 103, WriteRegNum = 3
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 104, SWvalue = 10A, WriteRegNum = 10
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 4 ALUResult = 104 WriteRegNum = 10
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = X, RegWrite = 0
+LWDataValue = X ALUResult = 108 WriteRegNum = X
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x01224820
+Increment PC = 7A4014
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x01224820
+Increment PC = 7A4014
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4010 ReadReg1Value = 109 ReadReg2Value = 106 SEoffset = X WriteReg_20_16 = 6 WriteReg_15_11 = 7 Function = 32
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4010 ReadReg1Value = 109 ReadReg2Value = 106 SEoffset = X WriteReg_20_16 = 6 WriteReg_15_11 = 7 Function = 32
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 207, SWvalue = 103, WriteRegNum = 3
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 207, SWvalue = 103, WriteRegNum = 3
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 4 ALUResult = 104 WriteRegNum = 10
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 4 ALUResult = 104 WriteRegNum = 10
+
+Clock Cycle 6
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x81180000
+Increment PC = 7A4018
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x01224820
+Increment PC = 7A4014
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4014 ReadReg1Value = 109 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 9 Function = 32
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4010 ReadReg1Value = 109 ReadReg2Value = 106 SEoffset = X WriteReg_20_16 = 6 WriteReg_15_11 = 7 Function = 32
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20F, SWvalue = 106, WriteRegNum = 7
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 207, SWvalue = 103, WriteRegNum = 3
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 207 WriteRegNum = 3
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 4 ALUResult = 104 WriteRegNum = 10
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x81180000
+Increment PC = 7A4018
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x81180000
+Increment PC = 7A4018
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4014 ReadReg1Value = 109 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 9 Function = 32
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4014 ReadReg1Value = 109 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 9 Function = 32
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20F, SWvalue = 106, WriteRegNum = 7
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20F, SWvalue = 106, WriteRegNum = 7
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 207 WriteRegNum = 3
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 207 WriteRegNum = 3
+
+Clock Cycle 7
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x81510010
+Increment PC = 7A401C
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x81180000
+Increment PC = 7A4018
+
+ID/EX (Write to by the IF stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4018 ReadReg1Value = 108 ReadReg2Value = 118 SEoffset = 00000000 WriteReg_20_16 = 24 WriteReg_15_11 = 0 Function = X
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4014 ReadReg1Value = 109 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 9 Function = 32
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20B, SWvalue = 102, WriteRegNum = 9
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20F, SWvalue = 106, WriteRegNum = 7
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20F WriteRegNum = 7
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 207 WriteRegNum = 3
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x81510010
+Increment PC = 7A401C
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x81510010
+Increment PC = 7A401C
+
+ID/EX (Write to by the IF stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4018 ReadReg1Value = 108 ReadReg2Value = 118 SEoffset = 00000000 WriteReg_20_16 = 24 WriteReg_15_11 = 0 Function = X
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4018 ReadReg1Value = 108 ReadReg2Value = 118 SEoffset = 00000000 WriteReg_20_16 = 24 WriteReg_15_11 = 0 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20B, SWvalue = 102, WriteRegNum = 9
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20B, SWvalue = 102, WriteRegNum = 9
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20F WriteRegNum = 7
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20F WriteRegNum = 7
+
+Clock Cycle 8
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00624022
+Increment PC = 7A4020
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x81510010
+Increment PC = 7A401C
+
+ID/EX (Write to by the IF stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A401C ReadReg1Value = 4 ReadReg2Value = 111 SEoffset = 00000010 WriteReg_20_16 = 17 WriteReg_15_11 = 0 Function = X
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A4018 ReadReg1Value = 108 ReadReg2Value = 118 SEoffset = 00000000 WriteReg_20_16 = 24 WriteReg_15_11 = 0 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 118, WriteRegNum = 24
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 20B, SWvalue = 102, WriteRegNum = 9
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20B WriteRegNum = 9
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20F WriteRegNum = 7
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00624022
+Increment PC = 7A4020
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00624022
+Increment PC = 7A4020
+
+ID/EX (Write to by the IF stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A401C ReadReg1Value = 4 ReadReg2Value = 111 SEoffset = 00000010 WriteReg_20_16 = 17 WriteReg_15_11 = 0 Function = X
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A401C ReadReg1Value = 4 ReadReg2Value = 111 SEoffset = 00000010 WriteReg_20_16 = 17 WriteReg_15_11 = 0 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 118, WriteRegNum = 24
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 118, WriteRegNum = 24
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20B WriteRegNum = 9
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20B WriteRegNum = 9
+
+Clock Cycle 9
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00624022
+Increment PC = 7A4020
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4020 ReadReg1Value = 207 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 8 Function = 34
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 0, ALUSrc = 1, ALUop = 00, MemRead = 1,  MemWrite = 0, Branch = 0 , MemToReg 1, RegWrite = 1,
+IncrPC 7A401C ReadReg1Value = 4 ReadReg2Value = 111 SEoffset = 00000010 WriteReg_20_16 = 17 WriteReg_15_11 = 0 Function = X
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 14, SWvalue = 111, WriteRegNum = 17
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 108, SWvalue = 118, WriteRegNum = 24
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 102 ALUResult = 108 WriteRegNum = 24
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 20B WriteRegNum = 9
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4020 ReadReg1Value = 207 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 8 Function = 34
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4020 ReadReg1Value = 207 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 8 Function = 34
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 14, SWvalue = 111, WriteRegNum = 17
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 14, SWvalue = 111, WriteRegNum = 17
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 102 ALUResult = 108 WriteRegNum = 24
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 102 ALUResult = 108 WriteRegNum = 24
+
+Clock Cycle 10
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+RegDst = 1, ALUSrc = 0, ALUop = 10, MemRead = 0,  MemWrite = 0, Branch = 0 , MemToReg 0, RegWrite = 1,
+IncrPC 7A4020 ReadReg1Value = 207 ReadReg2Value = 102 SEoffset = X WriteReg_20_16 = 2 WriteReg_15_11 = 8 Function = 34
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 105, SWvalue = 102, WriteRegNum = 8
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 1, MemWrite = 0, Branch = 0, MemToReg = 1, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 14, SWvalue = 111, WriteRegNum = 17
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 14 ALUResult = 14 WriteRegNum = 17
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 102 ALUResult = 108 WriteRegNum = 24
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 105, SWvalue = 102, WriteRegNum = 8
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 105, SWvalue = 102, WriteRegNum = 8
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 14 ALUResult = 14 WriteRegNum = 17
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 14 ALUResult = 14 WriteRegNum = 17
+
+Clock Cycle 11
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: MemRead = 0, MemWrite = 0, Branch = 0, MemToReg = 0, RegWrite = 1
+CalcBTA = X, Zero = 0 ALUResult = 105, SWvalue = 102, WriteRegNum = 8
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 105 WriteRegNum = 8
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 1, RegWrite = 1
+LWDataValue = 14 ALUResult = 14 WriteRegNum = 17
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 105 WriteRegNum = 8
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 105 WriteRegNum = 8
+
+Clock Cycle 12
+
+Before we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+MemToReg = 0, RegWrite = 1
+LWDataValue = X ALUResult = 105 WriteRegNum = 8
+
+After we copy the write side of pipeline register to the read side
+
+IF/ID Write (written to by the IF stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+IF/ID Read (Read by the ID stage) 
+Instruction = 0x00000000
+Increment PC = 0
+
+ID/EX (Write to by the IF stage) 
+Control = 00000000
+
+ID/EX Read (Read by the EX stage) 
+Control = 00000000
+
+EX/MEM Write (written to by the EX stage) 
+Control: 00000000 
+
+EX/MEM Read (Read by the Mem stage) 
+Control: 00000000 
+
+MEM/WB Write(written to by the MEM stage)
+Control = 00000000
+
+MEM/WB Read(Read to by the WB stage)
+Control = 00000000
+
